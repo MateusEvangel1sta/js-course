@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício</title>
+  </head>
+  <body>
+    <form action="" style="display: flex; flex-direction: column; gap: 1rem;">
+      <div>
+        <label for="userName">Nome:</label>
+        <input type="text" name="userName" id="userName">
+      </div>
+
+      <div>
+        <label for="userSurname">Sobrenome:</label>
+        <input type="text" name="userSurname" id="userSurname">
+      </div>
+
+      <div>
+        <label for="userWeight">Peso:</label>
+        <input type="text" name="userWeight" id="userWeight">
+      </div>
+
+      <div>
+        <label for="userHeight">Altura:</label>
+        <input type="text" name="userHeight" id="userHeight">
+      </div>
+
+      <div>
+        <input type="submit" value="Enviar">
+      </div>
+    </form>
+    
+    <div id="result"></div>
+    
+    <script>
+
+      function myScope() {
+        const form = document.querySelector('form');
+        const result = document.getElementById('result')
+        
+        const people = [];
+
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+
+          const userName = form.querySelector('#userName');
+          const userSurname = form.querySelector('#userSurname');
+          const userWeight = form.querySelector('#userWeight');
+          const userHeight = form.querySelector('#userHeight');
+
+          people.push({
+            username: userName.value,
+            usersurname: userSurname.value,
+            userweight: userWeight.value,
+            userheight: userHeight.value
+          });
+
+          console.log(people);
+
+          result.innerHTML += `<p>${people[people.length - 1].username} ${people[people.length - 1].usersurname} ${people[people.length - 1].userheight} ${people[people.length - 1].userweight}</p>`
+        });
+
+      }
+
+      myScope();
+      
+    </script>
+  </body>
+</html>
