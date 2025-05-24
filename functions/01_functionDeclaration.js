@@ -21,3 +21,12 @@ executeFunction(aData);
 const arrowFunction = () => {
   console.log('I am an arrow function.');
 };
+
+// Within an object
+const user = {
+  say() {
+    console.log('Olá, estou falando!')
+  }
+};
+
+user.say();
