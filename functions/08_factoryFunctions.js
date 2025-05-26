@@ -4,9 +4,9 @@ function createPeople(name, surname) {
     surname,
     say() {
       return `${this.name} está falando.`;
-    }
-  }
+    },
+  };
 }
 
-const p1 = createPeople('Luiz', 'Otávio');
+const p1 = createPeople("Luiz", "Otávio");
 console.log(p1);
