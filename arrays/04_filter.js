@@ -5,9 +5,9 @@ console.log(higherThanTen);
 
 const filteredData = numbers.filter;
 
-// Retorne as pessoas que tem o nome com 5 letras ou mais
-// Retorne as pessoas com mais de 50 anos
-// Retorne as pessoas cujo nome termina com "a"
+// Return the people who have the name with 5 letters or more
+// Return people over 50
+// Return people whose name ends with "a"
 
 const peoples = [
   { name: "Luiza", age: 62 },
