@@ -9,3 +9,12 @@ const otherProduct = Object.assign({}, product, {
 });
 
 console.log(product, otherProduct);
+
+// Freezing object
+Object.freeze(otherProduct);
+
+otherProduct.name = "Outro nome";
+console.log(otherProduct);
+
+// Recovering only the keys of the object
+console.log(Object.keys(otherProduct));
