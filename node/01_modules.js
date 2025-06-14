@@ -17,4 +17,8 @@ class Person {
   }
 }
 
-exports.Person = Person;
+// exports.Person = Person;
+
+module.exports = function (x, y) {
+  return x * y;
+};
